@@ -2,17 +2,19 @@ import  java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        double tutar, kdv, genelTutar; // Degiskenler tanimlandi.
+
+        double tutar, kdvTutari, kdvOrani = 0.18, kdvliTutar; // Degiskenler tanimlandi.
 
         Scanner input = new Scanner(System.in); // Scanner tanimlandi.
+
         System.out.print("Hosgeldiniz.\nFiyat bilgisini giriniz:");
 
         // Kullanicidan veri alindi ve bu veri ile matematiksel islemler gerceklestirildi.
         tutar = input.nextDouble();
-        kdv = tutar * .18;
-        genelTutar = tutar + kdv;
+        kdvTutari = tutar * kdvOrani;
+        kdvliTutar = tutar + kdvTutari;
 
         // Kullaniciya geribildirimde bulunuldu.
-        System.out.println("Girdiginiz deger: " + tutar + "\nGirdiginiz tutarin KDV'si: " + kdv + "\nKDV ile beraber genel toplam: " + genelTutar);
+        System.out.println("\n\nGirdiginiz tutar: " + tutar + "\nGirdiginiz tutarin KDV'si: " + kdvTutari + "\nKDV ile beraber genel toplam: " + kdvliTutar);
     }
 }
